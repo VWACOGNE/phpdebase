@@ -1,4 +1,5 @@
 <?php
+$metaTitle = 'Victor WACOGNE';
 include 'header.php';
 ?>
 <main>

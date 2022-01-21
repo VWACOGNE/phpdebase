@@ -1,5 +1,7 @@
 <?php
+$metaTitle = 'WAKE';
 include 'header.php';
+
 ?>
 <main>
     <button class="buttonreturn">
