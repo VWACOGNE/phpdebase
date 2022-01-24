@@ -1,5 +1,6 @@
 <?php
 $metaTitle = 'Victor WACOGNE';
+$metaDescription = 'CV de Monsieur WACOGNE victor';
 include 'header.php';
 ?>
 <main>

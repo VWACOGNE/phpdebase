@@ -1,5 +1,6 @@
 <?php
 $metaTitle = 'PLONGEE';
+$metaDescription = 'Activité de détente de Monsieur WACOGNE victor';
 include 'header.php';
 
 ?>

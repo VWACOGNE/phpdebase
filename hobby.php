@@ -1,5 +1,6 @@
 <?php
 $metaTitle = 'MOTOCROSS';
+$metaDescription = 'Sport annuel de Monsieur WACOGNE victor';
 include 'header.php'  ;
 
 
