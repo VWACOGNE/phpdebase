@@ -1,7 +1,7 @@
 <?php
 $metaTitle = 'WAKE';
 $metaDescription = 'Activité été de Monsieur WACOGNE victor';
-include 'header.php';
+
 
 ?>
 <main>
@@ -14,6 +14,3 @@ include 'header.php';
             <iframe class="videowake" src="https://player.vimeo.com/video/221395905?h=cb43fb50bc" width="560" height="315" frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 </main>
-<?php
-include 'footer.php';
-?>

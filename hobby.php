@@ -1,7 +1,7 @@
 <?php
 $metaTitle = 'MOTOCROSS';
 $metaDescription = 'Sport annuel de Monsieur WACOGNE victor';
-include 'header.php'  ;
+
 
 
 ?>
@@ -17,6 +17,3 @@ include 'header.php'  ;
              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
 </main>
-<?php
-include 'footer.php';
-?>
