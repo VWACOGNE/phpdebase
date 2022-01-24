@@ -1,23 +1,47 @@
+
+
 <?php
 $metaTitle = 'Victor WACOGNE';
 $metaDescription = 'CV de Monsieur WACOGNE victor';
-include 'header.php';
 
 
-
-if ($_GET["page"] == 'motocross') {
-        include 'hobby.php';
-                }
-if ($_GET["page"] == 'plongée') {
-        include 'hobbyp.php';
-                }
-if ($_GET["page"] == 'wake') {
-        include 'hobbyw.php';
-                }
-else {
+if ($_GET == null) {
+        $metaTitle = 'Victor WACOGNE';
+        $metaDescription = 'CV de Monsieur WACOGNE victor';
+        include 'header.php';
         include 'Accueil.php';
-        }
+        include 'footer.php';
+}
+elseif ($_GET["page"] == 'plongée') {
+        $metaTitle = 'PLONGEE';
+        $metaDescription = 'Activité détente de Monsieur WACOGNE victor';
+        include 'header.php';
+        include 'hobbyp.php';
+        include 'footer.php';
+}
+elseif ($_GET["page"] == 'wake') {
+        $metaTitle = 'WAKEBOARD';
+        $metaDescription = 'activité été de Monsieur WACOGNE victor';
+        include 'header.php';
+        include 'hobbyw.php';
+        include 'footer.php';
+}
+elseif ($_GET["page"] == 'accueil') {
+        $metaTitle = 'Victor WACOGNE';
+        $metaDescription = 'CV de Monsieur WACOGNE victor';
+        include 'header.php';
+        include 'Accueil.php';
+        include 'footer.php';
+}
+elseif ($_GET["page"] == 'motocross') {
+        $metaTitle = 'MOTOCROSS';
+        $metaDescription = 'Activité annuelle de Monsieur WACOGNE victor';
+        include 'header.php';
+        include 'hobby.php';
+        include 'footer.php';
+}
+else  {
+        include '404.php';
+}
 
-
-include 'footer.php';
 ?>
