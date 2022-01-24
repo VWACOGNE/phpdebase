@@ -1,8 +1,4 @@
-<?php
-$metaTitle = 'Victor WACOGNE';
-$metaDescription = 'CV de Monsieur WACOGNE victor';
 
-?>
 <main>
     <div class="corp">
         <div class="competences">

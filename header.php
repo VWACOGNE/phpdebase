@@ -41,7 +41,7 @@
         <ul id="menu">
             <li><a href="index.php?page=accueil">Accueil</a></li>
             <li><a href="index.php?page=motocross">Motocross</a></li>
-            <li><a href="index.php?page=plongée">Plongée</a></li>
+            <li><a href="index.php?page=plongee">Plongée</a></li>
             <li><a href="index.php?page=wake">Wakeboard</a></li>
 
         </ul>

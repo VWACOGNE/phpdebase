@@ -1,9 +1,4 @@
-<?php
-$metaTitle = 'PLONGEE';
-$metaDescription = 'Activité de détente de Monsieur WACOGNE victor';
 
-
-?>
 <main>
     <button class="buttonreturn">
         <a onclick="history.go(-1)"><img class="plongesreturn" src="http://www.diverresite.fr/Fleche-blanche-gauche.png">

@@ -1,9 +1,4 @@
-<?php
-$metaTitle = 'WAKE';
-$metaDescription = 'Activité été de Monsieur WACOGNE victor';
 
-
-?>
 <main>
     <button class="buttonreturn">
         <a onclick="history.go(-1)"><img class="wakereturn" src="http://www.diverresite.fr/Fleche-blanche-gauche.png">
