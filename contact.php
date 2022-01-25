@@ -1,3 +1,18 @@
+<?php
+$prenom=filter_input(INPUT_POST, 'user_name');
+$nom=filter_input(INPUT_POST, 'user_surname');
+$case=filter_input(INPUT_POST, 'case');
+$mail=filter_input(INPUT_POST, 'user_mail');
+$case2=filter_input(INPUT_POST, 'case2');
+$message=filter_input(INPUT_POST, 'user_message');
+$date=date("Y-m-d-H-i-s");
+if (!empty($case . $prenom . $nom . $mail . $case2 . $message))
+{
+    file_put_contents('contact/contact' . $date . '.txt', $case . "\n" . $prenom . "\n" . $nom . "\n" . $mail . "\n" . $case2 . "\n" . $message,);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -28,7 +43,7 @@
             font: 1em sans-serif;
 
             /* Pour que tous les champs texte aient la même dimension */
-            width: 300px;
+            width: 550px;
             box-sizing: border-box;
 
             /* Pour harmoniser le look & feel des bordures des champs texte */
@@ -120,14 +135,7 @@
 
 <div class="formulaire">
 
-    <form action="https://httpbin.org/get" method="get">
-        <div class="selection">
-            <select name="statut">
-                <option value="">--Please choose an option--</option>
-                <option value="Particulier">Particulier</option>
-                <option value="Professionnel">Professionnel</option>
-            </select>
-        </div>
+    <form action="index.php?page=contact" method="post">
 
         <div class="manwoman">
             <div>
@@ -142,14 +150,25 @@
             <input class="inputt" type="text" id="name" name="user_name">
         </div>
         <div>
+            <label for="surname">Prenom :</label>
+            <input class="inputt" type="text" id="surname" name="user_surname">
+        </div>
+        <div>
             <label for="mail">E-mail :</label>
             <input class="inputt" type="email" id="mail" name="user_mail">
+        </div>
+        <div>
+            <input id="proposition d'emploi" type="radio" name="case2" value="proposition d'emploi" style="margin-left: 50px">
+            <label for="proposition d'emploi">Proposition d'emploi</label>
+            <input id="demande d'information" type="radio" name="case2" value="demande d'information" style="margin-left: 50px">
+            <label for="demande d'information">Demande d'information</label>
+            <input id="prestations" type="radio" name="case2" value="prestations" style="margin-left: 50px">
+            <label for="prestations">Prestations</label>
         </div>
         <div>
             <label for="msg">Message :</label>
             <textarea id="msg" name="user_message"></textarea>
         </div>
-
         <div class="button">
             <button class="buttonformulaire" type="submit">Envoyer le message</button>
         </div>

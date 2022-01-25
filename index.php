@@ -1,5 +1,5 @@
 <?php
-$_G=filter_input(INPUT_GET, "page",FILTER_SANITIZE_ENCODED);
+$_G=filter_input(INPUT_GET, "page",FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_BACKTICK);
 
 if (isset($_G)) {
     if ($_G == 'plongee') {
@@ -22,6 +22,11 @@ if (isset($_G)) {
         $metaDescription = 'Activité annuelle de Monsieur WACOGNE victor';
         include 'header.php';
         include 'hobby.php';
+    } elseif ($_G == 'contact') {
+        $metaTitle = 'CONTACT';
+        $metaDescription = 'contacter Monsieur WACOGNE victor';
+        include 'header.php';
+        include 'contact.php';
     } else {
         include 'header.php';
         include '404.php';
@@ -34,6 +39,7 @@ if (isset($_G)) {
 
 }
 include 'footer.php';
+echo $date;
 
 
 

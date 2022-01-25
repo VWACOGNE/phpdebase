@@ -43,7 +43,7 @@
             <li><a href="index.php?page=motocross">Motocross</a></li>
             <li><a href="index.php?page=plongee">Plongée</a></li>
             <li><a href="index.php?page=wake">Wakeboard</a></li>
-
+            <li><a href="index.php?page=contact">contact</a></li>
         </ul>
     </nav>
 </header>
