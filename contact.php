@@ -1,15 +1,15 @@
 <?php
-$prenom=filter_input(INPUT_POST, 'user_name');
-$nom=filter_input(INPUT_POST, 'user_surname');
-$case=filter_input(INPUT_POST, 'case');
-$mail=filter_input(INPUT_POST, 'user_mail');
-$case2=filter_input(INPUT_POST, 'case2');
-$message=filter_input(INPUT_POST, 'user_message');
-$date=date("Y-m-d-H-i-s");
-if (!empty($case . $prenom . $nom . $mail . $case2 . $message))
-{
+$prenom = filter_input(INPUT_POST, 'user_name');
+$nom = filter_input(INPUT_POST, 'user_surname');
+$case = filter_input(INPUT_POST, 'case');
+$mail = filter_input(INPUT_POST, 'user_mail');
+$case2 = filter_input(INPUT_POST, 'case2');
+$message = filter_input(INPUT_POST, 'user_message');
+$date = date("Y-m-d-H-i-s");
+if (isset($date,$message,$case2,$case,$mail,$nom,$prenom)){
     file_put_contents('contact/contact' . $date . '.txt', $case . "\n" . $prenom . "\n" . $nom . "\n" . $mail . "\n" . $case2 . "\n" . $message,);
 }
+
 
 ?>
 
@@ -144,6 +144,7 @@ if (!empty($case . $prenom . $nom . $mail . $case2 . $message))
                 <input type="radio" id="Mr" name="case" value="Mr">
                 <label for="Mr">Mr</label>
             </div>
+
         </div>
         <div>
             <label for="name">Nom :</label>
@@ -158,9 +159,11 @@ if (!empty($case . $prenom . $nom . $mail . $case2 . $message))
             <input class="inputt" type="email" id="mail" name="user_mail">
         </div>
         <div>
-            <input id="proposition d'emploi" type="radio" name="case2" value="proposition d'emploi" style="margin-left: 50px">
+            <input id="proposition d'emploi" type="radio" name="case2" value="proposition d'emploi"
+                   style="margin-left: 50px">
             <label for="proposition d'emploi">Proposition d'emploi</label>
-            <input id="demande d'information" type="radio" name="case2" value="demande d'information" style="margin-left: 50px">
+            <input id="demande d'information" type="radio" name="case2" value="demande d'information"
+                   style="margin-left: 50px">
             <label for="demande d'information">Demande d'information</label>
             <input id="prestations" type="radio" name="case2" value="prestations" style="margin-left: 50px">
             <label for="prestations">Prestations</label>
